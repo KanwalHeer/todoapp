@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
     <h1 className="mainHeading">MY TODO APP</h1>
-    <Link href={"/todo"}><li><a>My Todo App</a></li></Link>
+    <Link href={"/todo"}><li>My Todo App</li></Link>
     </div>
   );
 }
