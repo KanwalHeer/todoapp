@@ -67,7 +67,7 @@ function Todo() {
       </div>
       <div className="text-center mt-4 flex gap-2  flex-wrap justify-center space-x-2 my-5 ">
         <input
-          className="text-xl rounded-md shadow-md  "
+          className="text-xl rounded-md shadow-md px-2 py-3"
           type="text"
           placeholder="Enter todo"
           value={todo}
@@ -91,15 +91,15 @@ function Todo() {
         </div>
       </div>
 
-      <div className="w-[10rem] sm:w-[20rem] md:w-[40rem] lg:w-[45rem] xl:w-[50rem]  m-auto flex flex-col gap-2 sm col ">
+      <div className="m-auto flex flex-col gap-2 w-full max-w-lg px-4">
         {todosList.map((mytodo: string, i: number) => {
           return (
             <div
               key={i}
-              className="bg-violet-600 flex justify-between items-center p-2 rounded-lg shadow-md"
+              className="bg-violet-600 flex justify-between items-center p-2 rounded-lg shadow-md "
             >
               <div className="flex gap-2">
-                <div className="text-lg text-white">{mytodo}</div>
+                <div className="text-lg text-white text-wrap word-beak overflow-hidden">{mytodo}</div>
               </div>
               <div className="flex gap-2 min-sm:flex-col">
                 <FaTrash
@@ -136,15 +136,17 @@ function Todo() {
             </h1>
           </div>
 
-          <div className="w-[10rem] sm:w-[20rem] md:w-[40rem] lg:w-[45rem] xl:w-[50rem]  m-auto flex flex-col gap-2 sm col ">
+          <div className="m-auto flex flex-col gap-2 w-full max-w-lg px-4">
             {impsList.map((imptodo: string, i: number) => {
               return (
+
+
                 <div
                   key={i}
-                  className="bg-violet-600 flex justify-between items-center p-2 rounded-lg shadow-md"
+                  className="bg-violet-600 flex justify-between break-words text-wrap items-center p-2 rounded-lg shadow-md"
                 >
                   <div className="flex gap-2">
-                    <div className="text-lg text-white">{imptodo}</div>
+                    <div className="text-lg text-white break-words">{imptodo}</div>
                   </div>
                   <div className="flex gap-2 min-sm:flex-col">
                     <FaTrash
@@ -159,6 +161,10 @@ function Todo() {
                     <FaStar className="hover:text-yellow-700 cursor-pointer text-yellow-500 text-2xl" />
                   </div>
                 </div>
+
+               
+
+
               );
             })}
           </div>
